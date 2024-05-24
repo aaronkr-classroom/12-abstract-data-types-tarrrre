@@ -9,7 +9,8 @@
 #include <iostream> // cin/cout을 사용하기 위해
 #include <stdexcept>
 #include <string>
-#include <vector>
+
+#include "Vec.h"
 
 #include "analysis.h"
 #include "grade.h"
@@ -52,7 +53,7 @@ int main() {
     int fileChoice = printGreeting();
     // cout << fileChoice << typeid(fileChoice).name();
 
-    vector<Student_info> students, did, didnt;
+    Vec<Student_info> students, did, didnt;
     string::size_type maxlen = 0;
 
     fileSelect(fileChoice, students, did, didnt, maxlen);
